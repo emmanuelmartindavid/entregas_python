@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<label>
+    <input type="text">
+</label>
+<button> Boton</button>
+<p style="color: deeppink"> desde {{ entidad }}, estas en la cursada {{ cursada }}
+<p>La fecha en la que estamos es : {{ fecha }}</p>
+<p>La lista es : {{ lista }}</p>
+Los numeros son:
+{% for numero in lista %}
+    <br>{{ numero }}
+{% endfor %} <br>
+
+mi diccionario {{ diccionario }}
+{% for key, value in diccionario.items %}
+    <br>{{ key }}: {{ value }}
+{% endfor %} <br>
+<br><br>
+{#esto es un comentario#}
+{% if cursada == "36"  %}
+    <h1>Cursada correcta. Enhorabuena</h1>
+{% else %}
+    <h1>Cursada Incorrecta. Lo lamento</h1>
+
+
+{% endif %}
+</body>
+</html>
